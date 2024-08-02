@@ -1,0 +1,24 @@
+<div class="col-12 mb-4">
+                  <h6 class="card-title">İnverter Durum Takibi</h6>
+                  <table class="table table-bordered datatables7">
+                    <thead>
+                      <tr>
+  
+                        <th scope="col">Sayaç </th>
+                        <th scope="col">Mesaj</th>
+                        <th scope="col">Değer</th>
+                        <th scope="col">Tarih</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <% for(i = 0;i < inverter_monitoring_alarms.length;i++) { %>
+                      <tr>
+                        <td><%= inverter_monitoring_alarms[i].counter.title ? inverter_monitoring_alarms[i].counter.title : inverter_monitoring_alarms[i].counter.name %></td>
+                        <td><%= inverter_monitoring_alarms[i].message %></td>
+                        <td><%= inverter_monitoring_alarms[i].value %></td>
+                        <td><%= inverter_monitoring_alarms[i].read_time %></td>
+                      </tr>
+                      <% } %>
+                    </tbody>
+                  </table>
+                </div>
