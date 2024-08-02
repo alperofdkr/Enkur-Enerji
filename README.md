@@ -43,7 +43,7 @@ const checkInverterConnection = async (inverter, startTime, endTime) => {
             }
 
             // Bağlantısız durumu raporla
-            if (disconnected) {
+             if (disconnected) { 
                 await handleDisconnectedInverter(inverter, startTime, endTime);
             }
         }
